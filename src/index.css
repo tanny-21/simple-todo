@@ -189,6 +189,22 @@ input::placeholder{
   display: none;
   
 }
+.disableButton{
+  background-color: transparent;
+  width: 1.5vw;
+  height: 1.5vw;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 80px;
+  cursor: pointer;
+  background-color: rgb(233, 193, 15);
+
+}
 .deletebutton{
   background-color: transparent;
   width: 1.5vw;

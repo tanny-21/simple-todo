@@ -2,6 +2,7 @@ import React from "react";
 import { MdDone } from "react-icons/md";
 import { MdModeEdit } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
+import { GrStatusDisabled } from "react-icons/gr";
 
 const TodoBoard = (props) => {
   return (
@@ -21,9 +22,9 @@ const TodoBoard = (props) => {
             <h4 className={item.isDone === true ? "done" : "notDone"}>
               {item.newInput}
             </h4>
-            <button className="editbutton" onClick={()=>props.handleEdit(index)}>
+            {props.editStatus === true ? <button className="disableButton"><GrStatusDisabled></GrStatusDisabled></button>:<button className="editbutton" onClick={()=>props.handleEdit(index)}>
               <MdModeEdit></MdModeEdit>
-            </button>
+            </button>}
             <button className="deletebutton" onClick={()=>props.handleDelete(index)}>
               <MdDeleteOutline> </MdDeleteOutline>
             </button>

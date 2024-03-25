@@ -43,9 +43,9 @@ const App = () => {
   function handleEdit(index) {
     setEditStatus(true);
     let newEditingList = [...tasks];
-
+      newEditingList[index].Edit = true;
     setNewInput(newEditingList[index].newInput);
-    newEditingList.forEach((item) => (item.Edit = true));
+   
 
     setTasks(newEditingList);
     setEditIndex(index)
@@ -60,7 +60,7 @@ const App = () => {
     item.isDone = false});
     setEditStatus(false)
     setTasks(newUpdatingList) 
-console.log(tasks)
+    
     /// dekh ek task pe agar edit click kiye toh woh edit task jayga 
     /// input filed me 
     
@@ -95,6 +95,7 @@ console.log(tasks)
           handleDone={handleDone}
           handleEdit={handleEdit}
           handleDelete={handleDelete}
+          editStatus={editStatus}
         >
           {" "}
         </TodoBoard>
