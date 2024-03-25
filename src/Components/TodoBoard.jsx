@@ -14,7 +14,7 @@ const TodoBoard = (props) => {
           <div className="task" key={index}>
             <div className={item.Edit === false ? 'edit-filterOFF':"edit-filterON"}>Editing</div>
             <button
-              className="donebutton"
+              className={props.tasks[index].isDone === true ? 'donebuttonActive':'donebutton '}
               onClick={() => props.handleDone(index)}
             >
               <MdDone></MdDone>

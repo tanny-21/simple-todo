@@ -115,6 +115,7 @@ input::placeholder{
   margin-bottom: 10px;
   position: relative;
   overflow: hidden;
+  transition:  all ease-in 0.5s;
   
 }
 .notDone{
@@ -140,6 +141,20 @@ input::placeholder{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.donebuttonActive{
+  background-color: transparent;
+  width: 1.5vw;
+  height: 1.5vw;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: rgb(44, 204, 44);
+  border: 1px solid rgb(44, 204, 44);
 }
 .donebutton:hover{
   background-color: rgb(44, 204, 44);
